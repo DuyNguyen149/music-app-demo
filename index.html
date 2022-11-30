@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/font/1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <title>Music player</title>
+</head>
+<body>
+    <div class="app_music">
+        <!-- Dashboard -->
+        <marquee direction="left" class="marquee_title">
+            <h4>
+                chúc các bạn enjoy cái moment ❤️❤️
+            </h4>
+        </marquee>
+        <div class="dashboard">
+            <i class="fa-solid fa-list icon-playlist"></i>
+            <!-- Header-title -->
+            <header class="header-title">
+                <h4>Now playing:</h4>
+                <h2>String 57th & 9th</h2>
+            </header>
+            <!-- End: Header-title -->
+
+            <!-- CD -->
+            <div class="cd">
+                <div class="cd-thumb" style="background-image: url(./assets/img/bg.jpg)"></div>
+            </div>
+            <!-- End: CD -->
+
+            <!-- Control -->
+            <div class="control">
+                <div class="btn btn-repeat">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div>
+
+                <div class="btn btn-prev">
+                    <i class="fa-solid fa-backward-step"></i>
+                </div>
+                
+                <div class="btn btn-toggle-play">
+                    <i class="fa-solid fa-play icon-play"></i>
+                    <i class="fa-solid fa-pause icon-pause"></i>
+                </div>
+
+                <div class="btn btn-next">
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+                
+                <div class="btn btn-random">
+                    <i class="fa-solid fa-shuffle"></i>
+                </div>
+            </div>
+            <!-- End: Control -->
+
+            <!-- Range Slider -->
+            <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+
+            <!-- End: Range slider   -->
+
+            <!-- Timer -->
+            <div class="timer">
+                <div class="remaining"></div>
+                <div class="duration"></div>
+            </div>
+            <!-- End: Timer -->
+
+            <!-- Volume -->
+            <div class="volume-section">
+                <i class="fa-solid fa-volume-high volume-icon appear"></i>
+                <i class="fa-solid fa-volume-xmark volume-muted"></i>
+                <input  class="volume-item" type="range" value="100" step="1" min="0" max="100">
+            </div>
+            <!-- End: Volume -->
+
+            <!-- Audio -->
+            <audio id="audio" src=""></audio>
+            <!-- End: Audio -->
+        </div>
+        <!-- End: Dashboard -->
+
+        <div class="playlist non-active"></div>
+    </div>
+    <!-- End: App_music -->
+</body>
+
+<script src="./app.js"></script>
+</html>
